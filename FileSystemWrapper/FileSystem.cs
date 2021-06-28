@@ -43,5 +43,10 @@
         {
             return (File.GetAttributes(path) & attributes) == attributes;
         }
+
+        public void CopyFile(string sourcePath, string destinationPath)
+        {
+            File.Copy(sourcePath, destinationPath);
+        }
     }
 }

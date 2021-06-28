@@ -16,5 +16,7 @@
         void ClearFlag(string path, FileAttributes attributes);
 
         bool HasFlag(string path, FileAttributes attributes);
+
+        void CopyFile(string sourcePath, string destinationPath); // TODO: write test for this
     }
 }
