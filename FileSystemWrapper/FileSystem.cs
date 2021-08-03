@@ -48,5 +48,10 @@
         {
             File.Copy(sourcePath, destinationPath);
         }
+
+        public void DeleteFile(string path)
+        {
+            File.Delete(path);
+        }
     }
 }
