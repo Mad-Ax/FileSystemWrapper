@@ -20,5 +20,9 @@
         void CopyFile(string sourcePath, string destinationPath); // TODO: write test for this
 
         void DeleteFile(string path); // TODO: write test for this
+
+        void CreateDirectory(string path); // TODO: write test for this
+
+        void MoveDirectory(string sourceDirName, string destDirName); // TODO: write test for this
     }
 }

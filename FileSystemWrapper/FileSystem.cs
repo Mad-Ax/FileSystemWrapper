@@ -53,5 +53,15 @@
         {
             File.Delete(path);
         }
+
+        public void CreateDirectory(string path)
+        {
+            Directory.CreateDirectory(path);
+        }
+
+        public void MoveDirectory(string sourceDirName, string destDirName)
+        {
+            Directory.Move(sourceDirName, destDirName);
+        }
     }
 }
