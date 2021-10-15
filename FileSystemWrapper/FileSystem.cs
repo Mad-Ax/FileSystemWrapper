@@ -1,8 +1,9 @@
 ﻿namespace Axoft.FileSystemWrapper
 {
-    using Microsoft.Extensions.Logging;
     using System.Collections.Generic;
     using System.IO;
+    using System.Linq;
+    using Microsoft.Extensions.Logging;
 
     public class FileSystem : IFileSystem
     {
@@ -62,6 +63,16 @@
         public void MoveDirectory(string sourceDirName, string destDirName)
         {
             Directory.Move(sourceDirName, destDirName);
+        }
+
+        public void DeleteDirectory(string directory)
+        {
+            Directory.Delete(directory);
+        }
+
+        public void MoveFile(string sourceFileName, string destFileName, bool overwrite = false)
+        {
+            File.Move(sourceFileName, destFileName, overwrite);
         }
     }
 }

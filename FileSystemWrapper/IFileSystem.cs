@@ -24,5 +24,9 @@
         void CreateDirectory(string path); // TODO: write test for this
 
         void MoveDirectory(string sourceDirName, string destDirName); // TODO: write test for this
+
+        void DeleteDirectory(string directory); // TODO: write test for this
+
+        void MoveFile(string sourceFileName, string destFileName, bool overwrite = false); // TODO: write test for this
     }
 }
