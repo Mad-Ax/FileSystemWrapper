@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using System.IO;
+    using Axoft.FileSystemWrapper.Models;
 
     public interface IFileSystem
     {
@@ -28,5 +29,7 @@
         void DeleteDirectory(string directory); // TODO: write test for this
 
         void MoveFile(string sourceFileName, string destFileName, bool overwrite = false); // TODO: write test for this
+
+        IEnumerable<IFileInfo> EnumerateFiles(string path); // TODO: write test for this
     }
 }

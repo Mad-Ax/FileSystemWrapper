@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
     using System.IO;
-    using System.Linq;
+    using Axoft.FileSystemWrapper.Models;
     using Microsoft.Extensions.Logging;
 
     public class FileSystem : IFileSystem
@@ -73,6 +73,11 @@
         public void MoveFile(string sourceFileName, string destFileName, bool overwrite = false)
         {
             File.Move(sourceFileName, destFileName, overwrite);
+        }
+
+        public IEnumerable<IFileInfo> EnumerateFiles(string path)
+        {
+            return FileInfoWrapper.EnumerateFiles(new DirectoryInfo(path).EnumerateFiles());
         }
     }
 }
