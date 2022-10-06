@@ -79,5 +79,14 @@
         {
             return FileInfoWrapper.EnumerateFiles(new DirectoryInfo(path).EnumerateFiles());
         }
+
+        public void DeleteFiles(string path, string searchPattern)
+        {
+            var files = Directory.GetFiles(path, searchPattern);
+            foreach (var file in files)
+            {
+                File.Delete(file);
+            }
+        }
     }
 }

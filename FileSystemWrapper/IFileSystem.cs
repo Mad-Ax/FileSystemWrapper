@@ -31,5 +31,7 @@
         void MoveFile(string sourceFileName, string destFileName, bool overwrite = false); // TODO: write test for this
 
         IEnumerable<IFileInfo> EnumerateFiles(string path); // TODO: write test for this
+
+        void DeleteFiles(string path, string searchPattern); // TODO: write test for this
     }
 }
